@@ -16,8 +16,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class SelectRegionalActivity extends ListActivity {
 
@@ -103,14 +101,12 @@ public class SelectRegionalActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// getting values from selected ListItem
-				
-				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);
-
-				//Starting new intent
-				Toast.makeText(getApplicationContext(), map.get("id_course"),
-						Toast.LENGTH_SHORT).show();				
+				finish();
+				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);			
 				Intent in = new Intent(getApplicationContext(), SelectListEtapesActivity.class);
 				in.putExtra(TAG_ID, map.get("id_course"));
+				startActivity(in);
+				
 				
 			}
 		});

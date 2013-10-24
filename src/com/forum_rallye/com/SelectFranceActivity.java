@@ -102,14 +102,12 @@ public class SelectFranceActivity extends ListActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				
-				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);
-
-				//Starting new intent
-				Toast.makeText(getApplicationContext(), map.get("id_course"),
-						Toast.LENGTH_SHORT).show();				
+				// getting values from selected ListItem
+				finish();
+				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);			
 				Intent in = new Intent(getApplicationContext(), SelectListEtapesActivity.class);
 				in.putExtra(TAG_ID, map.get("id_course"));
+				startActivity(in);
 
 			}
 		});

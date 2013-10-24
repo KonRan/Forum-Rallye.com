@@ -103,17 +103,11 @@ public class SelectWRCActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// getting values from selected ListItem
-				//String name = ((TextView) view.findViewById(R.id.name)).getText().toString();
-				//String cost = ((TextView) view.findViewById(R.id.dated)).getText().toString();
-				//String description = ((TextView) view.findViewById(R.id.datea)).getText().toString();
-				
-				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);
-
-				//Starting new intent
-				Toast.makeText(getApplicationContext(), map.get("id_course"),
-						Toast.LENGTH_SHORT).show();				
+				finish();
+				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);			
 				Intent in = new Intent(getApplicationContext(), SelectListEtapesActivity.class);
 				in.putExtra(TAG_ID, map.get("id_course"));
+				startActivity(in);
 
 			}
 		});

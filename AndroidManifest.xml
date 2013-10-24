@@ -31,7 +31,7 @@
             android:label="@string/title_activity_select_france" >
         </activity>
         <activity
-            android:name="com.forum_rallye.com.SelectEtapeActivity"
+            android:name="com.forum_rallye.com.SelectListEtapesActivity"
             android:label="@string/title_activity_select_etape" >
         </activity>
     </application>
