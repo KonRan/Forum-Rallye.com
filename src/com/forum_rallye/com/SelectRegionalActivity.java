@@ -103,7 +103,7 @@ public class SelectRegionalActivity extends ListActivity {
 				// getting values from selected ListItem
 				finish();
 				HashMap<String, String> map = (HashMap<String, String>) coursesList.get(position);			
-				Intent in = new Intent(getApplicationContext(), SelectListEtapesActivity.class);
+				Intent in = new Intent(getApplicationContext(), SelectListEtapesRegionalActivity.class);
 				in.putExtra(TAG_ID, map.get("id_course"));
 				startActivity(in);
 				

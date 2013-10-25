@@ -21,7 +21,6 @@ import org.json.JSONObject;
 
 
 import android.util.Log;
-import android.widget.Toast;
 
 public class JSONParser {
 
@@ -101,12 +100,11 @@ public class JSONParser {
 			// defaultHttpClient
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-			Log.d("ENVOI", httpPost.getEntity().toString());
 			
 			HttpResponse httpResponse = httpClient.execute(httpPost);
 			HttpEntity httpEntity = httpResponse.getEntity();
 			is = httpEntity.getContent();	
-			Log.d("REPONSE", is.toString());
+			
 
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -126,6 +124,7 @@ public class JSONParser {
 			}
 			is.close();
 			json = sb.toString();
+			Log.d("REPONSE JSON", json.toString());
 		} catch (Exception e) {
 			Log.e("Buffer Error", "Error converting result " + e.toString());
 		}

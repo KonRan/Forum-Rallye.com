@@ -11,13 +11,14 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class SelectListEtapesActivity extends ListActivity {
 
@@ -44,8 +45,24 @@ public class SelectListEtapesActivity extends ListActivity {
 		setContentView(R.layout.activity_select_list_etapes);
 		
 		Intent intent = getIntent();
-    	String id_course = intent.getStringExtra(TAG_IDCOURSE);
-    	Toast.makeText(getApplicationContext(), id_course, Toast.LENGTH_SHORT).show(); //TODO Supprimer après les tests
+    	final String id_course = intent.getStringExtra(TAG_IDCOURSE);
+    	
+    	Button btnClassG= (Button) findViewById(R.id.ButtonClassement);
+        btnClassG.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doAfficheGeneral();
+            }
+
+			private void doAfficheGeneral() {
+				Intent in = new Intent(getApplicationContext(), SelectClassementGeneralActivity.class);
+				in.putExtra(TAG_IDCOURSE, id_course);
+				startActivity(in);
+				
+			}
+
+			
+        });
 		
 		// Hashmap for ListView
 		etapesList = new ArrayList<HashMap<String, String>>();
@@ -111,21 +128,28 @@ public class SelectListEtapesActivity extends ListActivity {
 
 		// Launching new screen on Selecting Single ListItem
 		lv.setOnItemClickListener(new OnItemClickListener() {
+			
+			
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
+
 				
-				HashMap<String, String> map = (HashMap<String, String>) etapesList.get(position);
+				HashMap<String, String> map = (HashMap<String, String>)  etapesList.get(position);
 
 				//Starting new intent
-				Toast.makeText(getApplicationContext(), map.get("id_etape"),
-						Toast.LENGTH_SHORT).show();				
-				Intent in = new Intent(getApplicationContext(), SelectListEtapesActivity.class);
+				Intent in = new Intent(getApplicationContext(), SelectClassementActivity.class);
 				in.putExtra(TAG_IDETAPE, map.get("id_etape"));
+				startActivity(in);
 
 			}
 		});
+		
+		
+		
+		
+		
 
 	}
 

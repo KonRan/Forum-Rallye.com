@@ -13,38 +13,57 @@
         android:id="@+id/imageForum"
         android:layout_width="260dp"
         android:layout_height="150dp"
+        android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:clickable="true"
-        android:layout_gravity="center"
         android:scaleType="centerCrop"
         android:src="@drawable/fr" />
 
-    <Button
-        android:id="@+id/ButtonWRC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:text="WRC" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
-    <Button
-        android:id="@+id/ButtonFra"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="France" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/ButtonReg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Régional" />
-    
-    <Button
-        android:id="@+id/ButtonQuit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Quitter" />
+            <Button
+                android:id="@+id/ButtonWRC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red_button"
+                android:text="WRC"
+                android:textColor="#FFFFFFFF" />
 
+            <Button
+                android:id="@+id/ButtonFra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red_button"
+                android:text="France"
+                android:textColor="#FFFFFFFF" />
 
+            <Button
+                android:id="@+id/ButtonReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red_button"
+                android:text="Régional"
+                android:textColor="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonQuit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/red_button"
+                android:text="Quitter"
+                android:textColor="#FFFFFFFF" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

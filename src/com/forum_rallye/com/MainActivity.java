@@ -70,29 +70,27 @@ public class MainActivity extends Activity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    //@Override
+    //public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+      //  getMenuInflater().inflate(R.menu.main, menu);
+        //return true;
+   // }
     
     private void doSelectRegional() {
-    	finish();
 		Intent intent = new Intent(getApplicationContext(), SelectRegionalActivity.class);
 		startActivity(intent);
 		
 	}
     
     private void doSelectWRC() {
-    	finish();
 		Intent intent = new Intent(getApplicationContext(), SelectWRCActivity.class);
+		//startActivity(intent);
 		startActivity(intent);
 		
 	}
     
     private void doSelectFrance() {
-    	finish();
 		Intent intent = new Intent(getApplicationContext(), SelectFranceActivity.class);
 		startActivity(intent);
 		

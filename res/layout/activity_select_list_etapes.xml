@@ -2,13 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
-	<!-- Main ListView 
+    android:orientation="vertical" >
+
+    <!--
+         Main ListView 
 		 Always give id value as list(@android:id/list)
-	-->
+    -->
+
+    <Button
+        android:id="@+id/ButtonClassement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/red_button"
+        android:text="Classement général"
+        android:textColor="#FFFFFFFF" />
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

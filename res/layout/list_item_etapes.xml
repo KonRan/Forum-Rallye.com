@@ -2,51 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">  
+    android:orientation="horizontal" >
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical" >
+
         <TextView
             android:id="@+id/name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#43bd00"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:paddingBottom="2dip"
             android:paddingTop="6dip"
-            android:paddingBottom="2dip" />
+            android:textColor="#992f2f"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/dist"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#acacac"
-            android:paddingBottom="2dip">
+            android:paddingBottom="2dip"
+            android:textColor="#acacac" >
         </TextView>
+
         <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/rens"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#acacac"
-            android:paddingBottom="2dip">
-        </TextView>
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rens"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:textColor="#acacac" >
+            </TextView>
         </LinearLayout>
+
         <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/statut"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#43bd00"
-            android:paddingBottom="2dip">
-        </TextView>
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/statut"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:textColor="#43bd00" >
+            </TextView>
         </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</LinearLayout>

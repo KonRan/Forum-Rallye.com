@@ -8,5 +8,10 @@
     <string name="title_activity_select_wrc">SelectWRCActivity</string>
     <string name="title_activity_select_france">SelectFranceActivity</string>
     <string name="title_activity_select_etape">SelectEtapeActivity</string>
+    <string name="title_activity_select_list_etapes_wrc">SelectListEtapesWRCActivity</string>
+    <string name="title_activity_select_list_etapes_regional">SelectListEtapesRegionalActivity</string>
+    <string name="title_activity_select_list_etapes_france">SelectListEtapesFranceActivity</string>
+    <string name="title_activity_select_classement">SelectClassementActivity</string>
+    <string name="title_activity_select_classement_general">SelectClassementGeneralActivity</string>
 
 </resources>
